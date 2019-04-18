@@ -4,7 +4,6 @@ class FilmId extends Component{
     constructor(props){
         super(props);
         this.state={
-            films:[]
         }
     }
 componentDidMount(){
@@ -14,7 +13,7 @@ componentDidMount(){
 render(){
     return(
         <div className="row">
-        <h3>Film</h3>
+
         </div>
 
     )

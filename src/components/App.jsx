@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Films from './Films';
 import People from './People';
 import Home from './Home'
+import FilmId from './Id'
 
 
 class App extends Component {
@@ -33,9 +34,11 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/films" component={Films}>
                     </Route>
-
+                    <Route exact path="/film/:id/details" component={FilmId}>
+                    </Route>
                     <Route exact path="/people" component={People}>
                     </Route>
+                   
 
                 </Switch>
             </Router >
