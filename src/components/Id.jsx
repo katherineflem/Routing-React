@@ -1,21 +1,20 @@
 import React, {Component} from 'react'
-import Films from './Films'
 
 class FilmId extends Component{
     constructor(props){
         super(props);
         this.state={
-            
+            films:[]
         }
     }
-
+componentDidMount(){
+    console.log(this.props.match.params)
+}
 
 render(){
-    <Films />
-
     return(
         <div className="row">
-        <h3>{film.title}</h3>
+        <h3>Film</h3>
         </div>
 
     )
