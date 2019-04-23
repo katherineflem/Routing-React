@@ -9,7 +9,7 @@ class People extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.match)
+        // console.log(this.props.match)
         fetch("https://ghibliapi.herokuapp.com/people")
             .then(res => res.json())
             .then(person => { this.setState({ people: person }) })

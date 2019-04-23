@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Films extends Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class Films extends Component {
                 </div>
                 {this.state.films.map((film) => {
                     return (
-                        <div key={film.id} className="container d-flex justify-content-center">
+                        <div key={film.id} title={film.title} className="container d-flex justify-content-center">
                             <div className="row">
                                 <div className="column md-12">
                                     <div className="card bg-light border-dark mb-5">
