@@ -11,8 +11,8 @@ class Films extends Component {
 
     componentDidMount() {
         // console.log(this.props.match)
-        fetch("https://ghibliapi.herokuapp.com/films")
-            .then(res => res.json())
+        fetch("https://ghibliapi.herokuapp.com/films") //gets this endpoint
+            .then(res => res.json()) //converts json to javascript
             .then(film => { this.setState({ films: film }) })
     }
 
@@ -21,9 +21,11 @@ class Films extends Component {
 
             <>
                 <div className="row d-flex justify-content-center">
-                    <h3>Films</h3>
+                    <h3 className="text-center mb-2">Films</h3>
                 </div>
+        
                 {this.state.films.map((film) => {
+                    //map through the state
                     return (
                         <div key={film.id} title={film.title} className="container d-flex justify-content-center">
                             <div className="row">
@@ -32,7 +34,7 @@ class Films extends Component {
                                         <div className="card-body">
                                             <h2>{film.title}</h2>
                                             <p>{film.description}</p>
-                                            <Link to={`/films/${film.id}/details`}>{film.id}</Link>
+                                            <Link to={`/films/${film.id}/details`}className="btn btn-secondary">Get Details</Link>
                                         </div>
                                     </div>
                                 </div>

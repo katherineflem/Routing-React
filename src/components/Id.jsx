@@ -22,7 +22,7 @@ class FilmId extends Component {
         return (
             <>
                 <div>
-                    <h3>Film Details</h3>
+                    <h3 className="text-center">Film Details</h3>
                 </div>
                 <div className="container bg-light">
                     <div className="card-header bg-dark text-white">Title: {this.state.film.title}</div>
@@ -35,6 +35,10 @@ class FilmId extends Component {
                                 <li> rt-score: {this.state.film.rt_score}</li>
                             </ul>                
                     </div>
+                    <button 
+                    onClick={()=> this.props.history.goBack()}
+                    className="btn btn-success">Go Back
+                    </button>
                     </div>
                     </div>
 

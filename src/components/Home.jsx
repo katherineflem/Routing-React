@@ -6,7 +6,7 @@ class Home extends Component {
         return (
             <>
             <div>
-                <h1>Routing in React</h1>
+                <h1 className="text-center">Routing in React</h1>
             </div>
                <div className="col-md-12">
                <nav className="navbar navbar-expand-lg bg-light d-flex d-inline justify-content-center">
